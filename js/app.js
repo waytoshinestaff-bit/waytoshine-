@@ -5,25 +5,25 @@
 // ============ DATA ============
 
 const ednMembers = [
-    { id: 'edn01', name: 'Dawika', nickname: 'ดาว', realName: 'ดาวิกา สุริยัน', age: 18, ig: '@dawika.edn48', emoji: '⭐', group: 'edn48', votes: 1247 },
-    { id: 'edn02', name: 'Stella', nickname: 'สเตลล่า', realName: 'สเตลล่า ภัทรวดี', age: 19, ig: '@stella.edn48', emoji: '🌟', group: 'edn48', votes: 1102 },
-    { id: 'edn03', name: 'Bright', nickname: 'ไบร์ท', realName: 'ไบร์ท ชลิตา', age: 17, ig: '@bright.edn48', emoji: '✨', group: 'edn48', votes: 985 },
-    { id: 'edn04', name: 'Nova', nickname: 'โนว่า', realName: 'โนว่า ปรียานันท์', age: 20, ig: '@nova.edn48', emoji: '💫', group: 'edn48', votes: 876 },
-    { id: 'edn05', name: 'Saeng', nickname: 'แสง', realName: 'แสงดาว กัญญ์วรา', age: 18, ig: '@saeng.edn48', emoji: '🔆', group: 'edn48', votes: 812 },
-    { id: 'edn06', name: 'Fah', nickname: 'ฟ้า', realName: 'ฟ้าใส มณีรัตน์', age: 19, ig: '@fah.edn48', emoji: '🌠', group: 'edn48', votes: 756 },
-    { id: 'edn07', name: 'Napa', nickname: 'นภา', realName: 'นภาพร ศรีสว่าง', age: 17, ig: '@napa.edn48', emoji: '⚡', group: 'edn48', votes: 698 },
-    { id: 'edn08', name: 'Prao', nickname: 'พราว', realName: 'พราวพิมล ดาราวงศ์', age: 18, ig: '@prao.edn48', emoji: '🌙', group: 'edn48', votes: 645 },
+    { id: 'edn01', name: 'Hadsavee', nickname: 'Hua', realName: 'Hadsavee aiyratha', age: 17, ig: '@Hua.edn48official', emoji: '🦦', group: 'edn48', votes: 0 },
+    { id: 'edn02', name: 'Stella', nickname: 'สเตลล่า', realName: 'สเตลล่า ภัทรวดี', age: 19, ig: '@stella.edn48', emoji: '🌟', group: 'edn48', votes: 0 },
+    { id: 'edn03', name: 'Bright', nickname: 'ไบร์ท', realName: 'ไบร์ท ชลิตา', age: 17, ig: '@bright.edn48', emoji: '✨', group: 'edn48', votes: 0 },
+    { id: 'edn04', name: 'Nova', nickname: 'โนว่า', realName: 'โนว่า ปรียานันท์', age: 20, ig: '@nova.edn48', emoji: '💫', group: 'edn48', votes: 0 },
+    { id: 'edn05', name: 'Saeng', nickname: 'แสง', realName: 'แสงดาว กัญญ์วรา', age: 18, ig: '@saeng.edn48', emoji: '🔆', group: 'edn48', votes: 0 },
+    { id: 'edn06', name: 'Fah', nickname: 'ฟ้า', realName: 'ฟ้าใส มณีรัตน์', age: 19, ig: '@fah.edn48', emoji: '🌠', group: 'edn48', votes: 0 },
+    { id: 'edn07', name: 'Napa', nickname: 'นภา', realName: 'นภาพร ศรีสว่าง', age: 17, ig: '@napa.edn48', emoji: '⚡', group: 'edn48', votes: 0 },
+    { id: 'edn08', name: 'Prao', nickname: 'พราว', realName: 'พราวพิมล ดาราวงศ์', age: 18, ig: '@prao.edn48', emoji: '🌙', group: 'edn48', votes: 0 },
 ];
 
 const tlpMembers = [
-    { id: 'tlp01', name: 'Tulip', nickname: 'ทิวลิป', realName: 'ทิวลิป ศิริพร', age: 18, ig: '@tulip.tlp48', emoji: '🌷', group: 'tlp48', votes: 1189 },
-    { id: 'tlp02', name: 'Rose', nickname: 'โรส', realName: 'โรสมารี วรรณดี', age: 19, ig: '@rose.tlp48', emoji: '🌹', group: 'tlp48', votes: 1056 },
-    { id: 'tlp03', name: 'Lily', nickname: 'ลิลลี่', realName: 'ลิลลี่ ปัทมา', age: 17, ig: '@lily.tlp48', emoji: '🪷', group: 'tlp48', votes: 934 },
-    { id: 'tlp04', name: 'Iris', nickname: 'ไอริส', realName: 'ไอริส กมลชนก', age: 20, ig: '@iris.tlp48', emoji: '💐', group: 'tlp48', votes: 867 },
-    { id: 'tlp05', name: 'Daisy', nickname: 'เดซี่', realName: 'เดซี่ พิมพ์มาดา', age: 18, ig: '@daisy.tlp48', emoji: '🌸', group: 'tlp48', votes: 798 },
-    { id: 'tlp06', name: 'Violet', nickname: 'ไวโอเล็ต', realName: 'ไวโอเล็ต ชนิกานต์', age: 19, ig: '@violet.tlp48', emoji: '🌺', group: 'tlp48', votes: 723 },
-    { id: 'tlp07', name: 'Jasmine', nickname: 'แจส', realName: 'แจสมิน ภัทรา', age: 17, ig: '@jasmine.tlp48', emoji: '🌼', group: 'tlp48', votes: 687 },
-    { id: 'tlp08', name: 'Orchid', nickname: 'ออร์คิด', realName: 'ออร์คิด สิรินทร์', age: 18, ig: '@orchid.tlp48', emoji: '🏵️', group: 'tlp48', votes: 612 },
+    { id: 'tlp01', name: 'Tulip', nickname: 'ทิวลิป', realName: 'ทิวลิป ศิริพร', age: 18, ig: '@tulip.tlp48', emoji: '🌷', group: 'tlp48', votes: 0 },
+    { id: 'tlp02', name: 'Rose', nickname: 'โรส', realName: 'โรสมารี วรรณดี', age: 19, ig: '@rose.tlp48', emoji: '🌹', group: 'tlp48', votes: 0 },
+    { id: 'tlp03', name: 'Lily', nickname: 'ลิลลี่', realName: 'ลิลลี่ ปัทมา', age: 17, ig: '@lily.tlp48', emoji: '🪷', group: 'tlp48', votes: 0 },
+    { id: 'tlp04', name: 'Iris', nickname: 'ไอริส', realName: 'ไอริส กมลชนก', age: 20, ig: '@iris.tlp48', emoji: '💐', group: 'tlp48', votes: 0 },
+    { id: 'tlp05', name: 'Daisy', nickname: 'เดซี่', realName: 'เดซี่ พิมพ์มาดา', age: 18, ig: '@daisy.tlp48', emoji: '🌸', group: 'tlp48', votes: 0 },
+    { id: 'tlp06', name: 'Violet', nickname: 'ไวโอเล็ต', realName: 'ไวโอเล็ต ชนิกานต์', age: 19, ig: '@violet.tlp48', emoji: '🌺', group: 'tlp48', votes: 0 },
+    { id: 'tlp07', name: 'Jasmine', nickname: 'แจส', realName: 'แจสมิน ภัทรา', age: 17, ig: '@jasmine.tlp48', emoji: '🌼', group: 'tlp48', votes: 0 },
+    { id: 'tlp08', name: 'Orchid', nickname: 'ออร์คิด', realName: 'ออร์คิด สิรินทร์', age: 18, ig: '@orchid.tlp48', emoji: '🏵️', group: 'tlp48', votes: 0 },
 ];
 
 const ednEvents = [
