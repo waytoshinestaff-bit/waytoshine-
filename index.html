@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAY TO SHINE ✦ EDN48 & TLP48</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+Thai:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- ============ NAVBAR ============ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-brand" onclick="navigateTo('welcome')">
+            <span class="nav-logo">✦</span> WAY TO SHINE
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="#" onclick="navigateTo('welcome')" data-page="welcome">HOME</a>
+            <a href="#" onclick="navigateTo('edn48')" data-page="edn48">EDN48 ⭐</a>
+            <a href="#" onclick="navigateTo('tlp48')" data-page="tlp48">TLP48 🌷</a>
+            <a href="#" onclick="navigateTo('artists')" data-page="artists">ARTISTS</a>
+            <a href="#" onclick="navigateTo('eden-club')" data-page="eden-club">EDEN CLUB</a>
+            <a href="#" onclick="navigateTo('major-vote')" data-page="major-vote">MAJOR VOTE</a>
+            <a href="#" onclick="navigateTo('account')" data-page="account"><i class="fas fa-user-circle"></i> ACCOUNT</a>
+        </div>
+        <div class="nav-currency" id="navCurrency" style="display:none;">
+            <span class="currency-badge star-badge"><i class="fas fa-star"></i> <span id="navStars">0</span></span>
+            <span class="currency-badge token-badge"><i class="fas fa-coins"></i> <span id="navTokens">0</span></span>
+        </div>
+        <button class="nav-toggle" id="navToggle" onclick="toggleNav()">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- ============ PAGE: WELCOME ============ -->
+    <section class="page active" id="page-welcome">
+        <div class="welcome-hero">
+            <div class="particles" id="particles"></div>
+            <div class="welcome-content">
+                <div class="welcome-badge">✦ WELCOME TO ✦</div>
+                <h1 class="welcome-title">
+                    <span class="gradient-text-gold">WAY TO</span>
+                    <span class="gradient-text-pink">SHINE</span>
+                </h1>
+                <p class="welcome-subtitle">illuminate your world with us ✦ Gen 1</p>
+                <div class="welcome-groups">
+                    <div class="group-card edn-card" onclick="navigateTo('edn48')">
+                        <div class="group-card-glow edn-glow"></div>
+                        <div class="group-card-icon">⭐</div>
+                        <h2>EDN48</h2>
+                        <p>THE STARS</p>
+                        <span class="group-card-btn">ENTER →</span>
+                    </div>
+                    <div class="group-card tlp-card" onclick="navigateTo('tlp48')">
+                        <div class="group-card-glow tlp-glow"></div>
+                        <div class="group-card-icon">🌷</div>
+                        <h2>TLP48</h2>
+                        <p>THE TULIPS</p>
+                        <span class="group-card-btn">ENTER →</span>
+                    </div>
+                </div>
+                <button class="btn-artist" onclick="navigateTo('artists')">
+                    <i class="fas fa-users"></i> WAY TO SHINE ARTISTS
+                </button>
+            </div>
+            <div class="welcome-scroll-hint">
+                <span>SCROLL DOWN</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+        <!-- Welcome Info Section -->
+        <div class="welcome-info">
+            <div class="info-grid">
+                <div class="info-card glass-card">
+                    <i class="fas fa-star info-icon edn-color"></i>
+                    <h3>EDN48</h3>
+                    <p>ดาวที่ส่องสว่างบนท้องฟ้า พลังแห่งความฝันที่ไม่มีวันดับ</p>
+                </div>
+                <div class="info-card glass-card">
+                    <i class="fas fa-seedling info-icon tlp-color"></i>
+                    <h3>TLP48</h3>
+                    <p>ดอกทิวลิปที่บานสะพรั่ง ความงดงามที่เบ่งบานไม่รู้จบ</p>
+                </div>
+                <div class="info-card glass-card">
+                    <i class="fas fa-heart info-icon pink-color"></i>
+                    <h3>EDEN CLUB</h3>
+                    <p>เข้าร่วมแฟนคลับ รับสิทธิพิเศษ โหวตให้ไอดอลที่คุณรัก</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PAGE: EDN48 ============ -->
+    <section class="page" id="page-edn48">
+        <div class="group-banner edn-banner">
+            <div class="banner-overlay"></div>
+            <div class="banner-content">
+                <div class="banner-badge">⭐ WAY TO SHINE</div>
+                <h1 class="banner-title">EDN48</h1>
+                <p class="banner-sub">THE STARS — ดาวที่ส่องสว่างที่สุดบนท้องฟ้า</p>
+            </div>
+        </div>
+
+        <div class="group-nav-tabs">
+            <button class="tab-btn active" onclick="switchGroupTab('edn48', 'overview')">OVERVIEW</button>
+            <button class="tab-btn" onclick="switchGroupTab('edn48', 'members')">MEMBERS</button>
+            <button class="tab-btn" onclick="switchGroupTab('edn48', 'schedule')">SCHEDULE</button>
+            <button class="tab-btn" onclick="switchGroupTab('edn48', 'works')">WORKS</button>
+            <button class="tab-btn" onclick="switchGroupTab('edn48', 'music')">MUSIC & AUDIO</button>
+        </div>
+
+        <!-- EDN48 Overview Tab -->
+        <div class="tab-content active" id="edn48-overview">
+            <div class="section-container">
+                <!-- Spark of the Month -->
+                <div class="spark-section glass-card-dark">
+                    <div class="spark-header">
+                        <h2><i class="fas fa-fire"></i> SPARK OF THE MONTH</h2>
+                        <span class="spark-month" id="edn-spark-month">NOVEMBER 2026</span>
+                    </div>
+                    <div class="spark-podium" id="edn-spark-podium">
+                        <!-- Filled by JS -->
+                    </div>
+                    <button class="btn-vote" onclick="navigateTo('major-vote')">
+                        <i class="fas fa-star"></i> VOTE NOW
+                    </button>
+                </div>
+
+                <!-- Schedule Preview -->
+                <div class="schedule-preview glass-card-dark">
+                    <h2><i class="fas fa-calendar-alt"></i> UPCOMING EVENTS</h2>
+                    <div class="event-list" id="edn-events">
+                        <!-- Filled by JS -->
+                    </div>
+                </div>
+
+                <!-- Latest Release -->
+                <div class="latest-release glass-card-dark">
+                    <h2><i class="fas fa-compact-disc"></i> LATEST RELEASE</h2>
+                    <div class="release-card">
+                        <div class="release-cover edn-release-cover">
+                            <div class="release-cover-art">
+                                <span>⭐</span>
+                                <div class="release-title-overlay">EDN48 1st Single</div>
+                            </div>
+                        </div>
+                        <div class="release-info">
+                            <span class="release-tag">1st SINGLE</span>
+                            <h3>Starlight Symphony</h3>
+                            <p class="release-date">Released: October 2026</p>
+                            <p class="release-desc">ซิงเกิลแรกของ EDN48 ที่จะพาคุณท่องไปในแสงดาว เพลงที่เต็มไปด้วยพลังและความหวัง</p>
+                            <div class="release-tracks">
+                                <div class="track-item">
+                                    <span class="track-num">01</span>
+                                    <span class="track-name">Starlight Symphony</span>
+                                    <span class="track-dur">4:12</span>
+                                    <button class="track-play" onclick="playTrack('Starlight Symphony')"><i class="fas fa-play"></i></button>
+                                </div>
+                                <div class="track-item">
+                                    <span class="track-num">02</span>
+                                    <span class="track-name">Shining Forever</span>
+                                    <span class="track-dur">3:48</span>
+                                    <button class="track-play" onclick="playTrack('Shining Forever')"><i class="fas fa-play"></i></button>
+                                </div>
+                                <div class="track-item">
+                                    <span class="track-num">03</span>
+                                    <span class="track-name">Night Sky Promise</span>
+                                    <span class="track-dur">4:05</span>
+                                    <button class="track-play" onclick="playTrack('Night Sky Promise')"><i class="fas fa-play"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EDN48 Members Tab -->
+        <div class="tab-content" id="edn48-members">
+            <div class="section-container">
+                <h2 class="section-title"><i class="fas fa-users"></i> EDN48 MEMBERS</h2>
+                <div class="members-grid" id="edn-members-grid">
+                    <!-- Filled by JS -->
+                </div>
+                <!-- Social Media Info -->
+                <div class="social-info glass-card-dark">
+                    <h3><i class="fas fa-share-alt"></i> EDN48 OFFICIAL SOCIAL MEDIA</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i> @edn48official</a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i> @EDN48_Official</a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i> EDN48 Official</a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i> @edn48official</a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i> EDN48 Official</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EDN48 Schedule Tab -->
+        <div class="tab-content" id="edn48-schedule">
+            <div class="section-container">
+                <h2 class="section-title"><i class="fas fa-calendar-alt"></i> EDN48 SCHEDULE</h2>
+                <div class="schedule-calendar" id="edn-schedule-calendar">
+                    <!-- Filled by JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- EDN48 Works Tab -->
+        <div class="tab-content" id="edn48-works">
+            <div class="section-container">
+                <h2 class="section-title"><i class="fas fa-film"></i> EDN48 WORKS & RELEASES</h2>
+                <div class="works-grid" id="edn-works-grid">
+                    <!-- Filled by JS -->
+                </div>
+            </div>
+        </div>
+
+        <!-- EDN48 Music Tab -->
+        <div class="tab-content" id="edn48-music">
+            <div class="section-container">
+                <h2 class="section-title"><i class="fas fa-music"></i> MUSIC & AUDIO</h2>
+                <div class="music-player glass-card-dark">
+                    <div class="player-cover edn-player-cover">
+                        <div class="player-disc spinning" id="edn-disc">
+                            <span>⭐</span>
+                        </div>
+                    </div>
+                    <div class="player-info">
+                        <h3 id="edn-now-playing">Starlight Symphony</h3>
+                        <p id="edn-now-artist">EDN48</p>
+                        <div class="player-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill edn-progress" id="edn-progress" style="width:35%"></div>
+                            </div>
+                            <div class="progress-time">
+                                <span>1:28</span><span>4:12</span>
+                            </div>
+                        </div>
+                        <div class="player-controls">
+                            <button class="ctrl-btn"><i class="fas fa-backward"></i></button>
+                            <button class="ctrl-btn ctrl-play" id="edn-play-btn" onclick="togglePlay('edn')"><i class="fas fa-play"></i></button>
+                            <button class="ctrl-btn"><i class="fas fa-forward"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="playlist glass-card-dark">
+                    <h3>PLAYLIST — EDN48 1st Single</h3>
+                    <div class="playlist-tracks" id="edn-playlist">
+                        <!-- Filled by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PAGE: TLP48 ============ -->
+    <section class="page" id="page-tlp48">
+        <div class="group-banner tlp-banner">
+            <div class="banner-overlay"></div>
+            <div class="banner-content">
+                <div class="banner-badge">🌷 WAY TO SHINE</div>
+                <h1 class="banner-title">TLP48</h1>
+                <p class="banner-sub">THE TULIPS — ดอกทิวลิปที่บานสะพรั่งที่สุด</p>
+            </div>
+        </div>
+
+        <div class="group-nav-tabs tlp-tabs">
+            <button class="tab-btn active" onclick="switchGroupTab('tlp48', 'overview')">OVERVIEW</button>
+            <button class="tab-btn" onclick="switchGroupTab('tlp48', 'members')">MEMBERS</button>
+            <button class="tab-btn" onclick="switchGroupTab('tlp48', 'schedule')">SCHEDULE</button>
+            <button class="tab-btn" onclick="switchGroupTab('tlp48', 'works')">WORKS</button>
+            <button class="tab-btn" onclick="switchGroupTab('tlp48', 'music')">MUSIC & AUDIO</button>
+        </div>
+
+        <!-- TLP48 Overview Tab -->
+        <div class="tab-content active" id="tlp48-overview">
+            <div class="section-container">
+                <div class="spark-section glass-card-dark tlp-spark">
+                    <div class="spark-header">
+                        <h2><i class="fas fa-fire"></i> SPARK OF THE MONTH</h2>
+                        <span class="spark-month" id="tlp-spark-month">NOVEMBER 2026</span>
+                    </div>
+                    <div class="spark-podium" id="tlp-spark-podium"></div>
+                    <button class="btn-vote tlp-vote-btn" onclick="navigateTo('major-vote')">
+                        <i class="fas fa-star"></i> VOTE NOW
+                    </button>
+                </div>
+                <div class="schedule-preview glass-card-dark">
+                    <h2><i class="fas fa-calendar-alt"></i> UPCOMING EVENTS</h2>
+                    <div class="event-list" id="tlp-events"></div>
+                </div>
+                <div class="latest-release glass-card-dark">
+                    <h2><i class="fas fa-compact-disc"></i> LATEST RELEASE</h2>
+                    <div class="release-card">
+                        <div class="release-cover tlp-release-cover">
+                            <div class="release-cover-art tlp-cover-art">
+                                <span>🌷</span>
+                                <div class="release-title-overlay">TLP48 1st Single</div>
+                            </div>
+                        </div>
+                        <div class="release-info">
+                            <span class="release-tag tlp-tag">1st SINGLE</span>
+                            <h3>Tulip Garden</h3>
+                            <p class="release-date">Released: November 2026</p>
+                            <p class="release-desc">ซิงเกิลแรกของ TLP48 ความงดงามที่เบ่งบานเหมือนดอกทิวลิปในสวนแห่งความฝัน</p>
+                            <div class="release-tracks">
+                                <div class="track-item">
+                                    <span class="track-num">01</span>
+                                    <span class="track-name">Tulip Garden</span>
+                                    <span class="track-dur">3:56</span>
+                                    <button class="track-play tlp-play" onclick="playTrack('Tulip Garden')"><i class="fas fa-play"></i></button>
+                                </div>
+                                <div class="track-item">
+                                    <span class="track-num">02</span>
+                                    <span class="track-name">Bloom With Me</span>
+                                    <span class="track-dur">4:02</span>
+                                    <button class="track-play tlp-play" onclick="playTrack('Bloom With Me')"><i class="fas fa-play"></i></button>
+                                </div>
+                                <div class="track-item">
+                                    <span class="track-num">03</span>
+                                    <span class="track-name">Petal Promise</span>
+                                    <span class="track-dur">3:45</span>
+                                    <button class="track-play tlp-play" onclick="playTrack('Petal Promise')"><i class="fas fa-play"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TLP48 Members Tab -->
+        <div class="tab-content" id="tlp48-members">
+            <div class="section-container">
+                <h2 class="section-title tlp-title"><i class="fas fa-users"></i> TLP48 MEMBERS</h2>
+                <div class="members-grid" id="tlp-members-grid"></div>
+                <div class="social-info glass-card-dark">
+                    <h3><i class="fas fa-share-alt"></i> TLP48 OFFICIAL SOCIAL MEDIA</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link tlp-social"><i class="fab fa-instagram"></i> @tlp48official</a>
+                        <a href="#" class="social-link tlp-social"><i class="fab fa-twitter"></i> @TLP48_Official</a>
+                        <a href="#" class="social-link tlp-social"><i class="fab fa-youtube"></i> TLP48 Official</a>
+                        <a href="#" class="social-link tlp-social"><i class="fab fa-tiktok"></i> @tlp48official</a>
+                        <a href="#" class="social-link tlp-social"><i class="fab fa-facebook"></i> TLP48 Official</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TLP48 Schedule Tab -->
+        <div class="tab-content" id="tlp48-schedule">
+            <div class="section-container">
+                <h2 class="section-title tlp-title"><i class="fas fa-calendar-alt"></i> TLP48 SCHEDULE</h2>
+                <div class="schedule-calendar" id="tlp-schedule-calendar"></div>
+            </div>
+        </div>
+
+        <!-- TLP48 Works Tab -->
+        <div class="tab-content" id="tlp48-works">
+            <div class="section-container">
+                <h2 class="section-title tlp-title"><i class="fas fa-film"></i> TLP48 WORKS & RELEASES</h2>
+                <div class="works-grid" id="tlp-works-grid"></div>
+            </div>
+        </div>
+
+        <!-- TLP48 Music Tab -->
+        <div class="tab-content" id="tlp48-music">
+            <div class="section-container">
+                <h2 class="section-title tlp-title"><i class="fas fa-music"></i> MUSIC & AUDIO</h2>
+                <div class="music-player glass-card-dark tlp-player">
+                    <div class="player-cover tlp-player-cover">
+                        <div class="player-disc spinning" id="tlp-disc"><span>🌷</span></div>
+                    </div>
+                    <div class="player-info">
+                        <h3 id="tlp-now-playing">Tulip Garden</h3>
+                        <p id="tlp-now-artist">TLP48</p>
+                        <div class="player-progress">
+                            <div class="progress-bar"><div class="progress-fill tlp-progress" id="tlp-progress" style="width:20%"></div></div>
+                            <div class="progress-time"><span>0:47</span><span>3:56</span></div>
+                        </div>
+                        <div class="player-controls">
+                            <button class="ctrl-btn"><i class="fas fa-backward"></i></button>
+                            <button class="ctrl-btn ctrl-play" id="tlp-play-btn" onclick="togglePlay('tlp')"><i class="fas fa-play"></i></button>
+                            <button class="ctrl-btn"><i class="fas fa-forward"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="playlist glass-card-dark">
+                    <h3>PLAYLIST — TLP48 1st Single</h3>
+                    <div class="playlist-tracks" id="tlp-playlist"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PAGE: ARTISTS ============ -->
+    <section class="page" id="page-artists">
+        <div class="artists-hero">
+            <h1 class="section-title-big">WAY TO SHINE <span class="gradient-text-gold">ARTISTS</span></h1>
+            <p class="artists-sub">ศิลปินทั้งหมดในสังกัด Way To Shine</p>
+        </div>
+        <div class="section-container">
+            <div class="artists-group-section">
+                <div class="artists-group-header edn-header">
+                    <span>⭐</span> <h2>EDN48</h2> <span class="artist-count" id="edn-count">8 Members</span>
+                </div>
+                <div class="artists-mini-grid" id="artists-edn-grid"></div>
+            </div>
+            <div class="artists-group-section">
+                <div class="artists-group-header tlp-header">
+                    <span>🌷</span> <h2>TLP48</h2> <span class="artist-count" id="tlp-count">8 Members</span>
+                </div>
+                <div class="artists-mini-grid" id="artists-tlp-grid"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PAGE: EDEN CLUB ============ -->
+    <section class="page" id="page-eden-club">
+        <div class="club-hero">
+            <div class="club-hero-bg"></div>
+            <h1><i class="fas fa-crown"></i> EDEN CLUB</h1>
+            <p>สมาชิกแฟนคลับอย่างเป็นทางการของ Way To Shine</p>
+        </div>
+        <div class="section-container">
+            <div class="club-grid">
+                <!-- Redeem Code -->
+                <div class="club-card glass-card-dark">
+                    <div class="club-card-icon"><i class="fas fa-gift"></i></div>
+                    <h3>REDEEM CODE</h3>
+                    <p>กรอกรหัสเพื่อรับ STAR และ TOKEN พิเศษ</p>
+                    <div class="redeem-form">
+                        <input type="text" id="redeemInput" placeholder="กรอก CODE ที่นี่..." class="redeem-input" maxlength="20">
+                        <button class="btn-redeem" onclick="redeemCode()">
+                            <i class="fas fa-check-circle"></i> REDEEM
+                        </button>
+                    </div>
+                    <div id="redeemResult" class="redeem-result"></div>
+                </div>
+
+                <!-- Currency Info -->
+                <div class="club-card glass-card-dark">
+                    <div class="club-card-icon star-icon"><i class="fas fa-star"></i></div>
+                    <h3>STAR ⭐</h3>
+                    <p>ใช้โหวต SPARK OF THE MONTH ให้เมมเบอร์ที่คุณรัก</p>
+                    <div class="currency-display">
+                        <span class="currency-amount" id="clubStars">0</span>
+                        <span class="currency-label">STARS</span>
+                    </div>
+                </div>
+                <div class="club-card glass-card-dark">
+                    <div class="club-card-icon token-icon"><i class="fas fa-coins"></i></div>
+                    <h3>TOKEN 🪙</h3>
+                    <p>ใช้ซื้อของสะสม สินค้าพิเศษ และไอเทมต่างๆ</p>
+                    <div class="currency-display">
+                        <span class="currency-amount" id="clubTokens">0</span>
+                        <span class="currency-label">TOKENS</span>
+                    </div>
+                </div>
+
+                <!-- Shop Preview -->
+                <div class="club-card glass-card-dark full-width">
+                    <div class="club-card-icon"><i class="fas fa-store"></i></div>
+                    <h3>TOKEN SHOP</h3>
+                    <div class="shop-items" id="shopItems">
+                        <!-- Filled by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PAGE: MAJOR VOTE ============ -->
+    <section class="page" id="page-major-vote">
+        <div class="vote-hero">
+            <div class="vote-hero-bg"></div>
+            <h1><i class="fas fa-trophy"></i> MAJOR VOTE</h1>
+            <p>SPARK OF THE MONTH — โหวตเมมเบอร์ที่คุณรักด้วย STAR</p>
+            <div class="vote-balance">
+                <span><i class="fas fa-star"></i> Your Stars: <strong id="voteStarBalance">0</strong></span>
+            </div>
+        </div>
+        <div class="section-container">
+            <div class="vote-tabs">
+                <button class="vote-tab-btn active" onclick="switchVoteTab('edn')">⭐ EDN48</button>
+                <button class="vote-tab-btn" onclick="switchVoteTab('tlp')">🌷 TLP48</button>
+            </div>
+            <div class="vote-grid" id="voteGrid">
+                <!-- Filled by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PAGE: ACCOUNT ============ -->
+    <section class="page" id="page-account">
+        <div class="account-hero">
+            <div class="account-avatar">
+                <i class="fas fa-user-astronaut"></i>
+            </div>
+            <h1 id="accountName">EDEN Member</h1>
+            <p class="account-id" id="accountId">ID: #000001</p>
+        </div>
+        <div class="section-container">
+            <div class="account-grid">
+                <!-- Currency -->
+                <div class="account-card glass-card-dark">
+                    <h3><i class="fas fa-wallet"></i> MY WALLET</h3>
+                    <div class="wallet-items">
+                        <div class="wallet-item">
+                            <div class="wallet-icon star-icon"><i class="fas fa-star"></i></div>
+                            <div class="wallet-info">
+                                <span class="wallet-amount" id="accStars">0</span>
+                                <span class="wallet-label">STARS</span>
+                            </div>
+                        </div>
+                        <div class="wallet-item">
+                            <div class="wallet-icon token-icon"><i class="fas fa-coins"></i></div>
+                            <div class="wallet-info">
+                                <span class="wallet-amount" id="accTokens">0</span>
+                                <span class="wallet-label">TOKENS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kami Oshi -->
+                <div class="account-card glass-card-dark">
+                    <h3><i class="fas fa-crown"></i> KAMI OSHI</h3>
+                    <p class="kami-desc">เมมเบอร์ที่คุณรักที่สุดในโลก — เลือกได้ 1 คน</p>
+                    <div class="kami-oshi-display" id="kamiOshiDisplay">
+                        <div class="kami-empty">
+                            <i class="fas fa-heart-broken"></i>
+                            <p>ยังไม่ได้เลือก Kami Oshi</p>
+                            <button class="btn-select-kami" onclick="navigateTo('artists')">เลือก Kami Oshi →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oshi List -->
+                <div class="account-card glass-card-dark full-width">
+                    <h3><i class="fas fa-heart"></i> MY OSHI LIST</h3>
+                    <p class="oshi-desc">เมมเบอร์ที่คุณกด OSHI ไว้ — <span id="oshiCount">0</span> คน</p>
+                    <div class="oshi-list" id="oshiList">
+                        <div class="oshi-empty">
+                            <i class="fas fa-heart"></i>
+                            <p>ยังไม่มี Oshi — ไปกด OSHI ที่หน้า MEMBERS ได้เลย!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ MEMBER MODAL ============ -->
+    <div class="modal-overlay" id="memberModal">
+        <div class="modal-content glass-card-dark">
+            <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+            <div class="modal-member-info" id="modalContent">
+                <!-- Filled by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ VOTE MODAL ============ -->
+    <div class="modal-overlay" id="voteModal">
+        <div class="modal-content glass-card-dark vote-modal-content">
+            <button class="modal-close" onclick="closeVoteModal()"><i class="fas fa-times"></i></button>
+            <div id="voteModalContent"></div>
+        </div>
+    </div>
+
+    <!-- ============ TOAST ============ -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-brand">✦ WAY TO SHINE ✦</div>
+            <div class="footer-links">
+                <a href="#" onclick="navigateTo('edn48')">EDN48</a>
+                <a href="#" onclick="navigateTo('tlp48')">TLP48</a>
+                <a href="#" onclick="navigateTo('eden-club')">EDEN CLUB</a>
+                <a href="#" onclick="navigateTo('major-vote')">MAJOR VOTE</a>
+            </div>
+            <div class="footer-socials">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <p class="footer-copy">© 2026 Way To Shine Entertainment. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
